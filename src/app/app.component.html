@@ -11,7 +11,7 @@
             {{ server.status }}
           </span>
           <strong>
-            {{ server.name | shorten }}
+            {{ server.name | shorten:4 }}
           </strong> | 
           <!-- applying uppercase pipe to instanceType; this will affect what is output to the template but not the actual data itself -->
           {{ server.instanceType | uppercase}} | 
