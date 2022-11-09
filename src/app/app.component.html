@@ -13,8 +13,11 @@
           <strong>
             {{ server.name }}
           </strong> | 
+          <!-- applying uppercase pipe to instanceType; this will affect what is output to the template but not the actual data itself -->
           {{ server.instanceType | uppercase}} | 
-          {{ server.started | date}}
+          <!-- can have different parameters for pipes using :''-->
+          <!-- added the fullDate parameter to the date pipe to change how the date is displayed -->
+          {{ server.started | date:'fullDate'}} 
         </li>
       </ul>
     </div>
